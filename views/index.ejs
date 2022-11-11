@@ -5,9 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>hello world</h1>
+    <header>
+        <!-- header -->
+        <div class="row">
+            <div class="col-8">
+                <h1>Timeline</h1>
+            </div>
+            <div class="col-4">
+                <a href="/"><p>Sign in/Register</p></a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- submit form -->
+        <div class="row">
+            <div class="col-8">
+                <form method="POST" action="/submitform">
+                    <label for="blog">Post a message</label>
+                    <textarea id="blog" name="blog" id="blog"></textarea>
+                    <button type="submit" name="submit-button">Post a message</button>
+                </form>
+            </div>
+        </div>
+        <!-- posts -->
+        
+    </main>
 </body>
 </html>
