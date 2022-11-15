@@ -26,12 +26,24 @@
             <div class="col-8">
                 <form method="POST" action="/post">
                     <label for="blog">Post a message</label>
-                    <textarea id="blog" name="blog"></textarea>
+                    <div class="textarea">
+                        <textarea id="blog" name="blog"></textarea>
+                    </div>
                     <button type="submit" name="submit-button">Post a message</button>
                 </form>
+                <!-- posts -->
+                <div class="posts-container">
+                    <% if (result.length > 0) { %>
+                        <% result.forEach((post) => {%> 
+                            <h4><%= post.name %></h4>
+                            <p><%= post.post%></p>
+                        <% }) %>
+                    <% } else { %>
+                        <p>No posts available</p>
+                    <% } %>
+                </div>
             </div>
         </div>
-        <!-- posts -->
         
     </main>
 </body>
