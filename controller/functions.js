@@ -1,7 +1,7 @@
 const Post = require('../models/posts.js')
 
 const home = (req, res) => {
-    Post.find()
+    Post.find().sort({createdAt: -1})
         .then( result => {
             res.render("index", {result})
         })  
@@ -9,7 +9,6 @@ const home = (req, res) => {
 }
 
 const post = (req, res) => {
-    console.log(req.body)
     const post = new Post({
         name : 'flups',
         post : req.body.blog
